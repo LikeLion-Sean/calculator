@@ -8,7 +8,33 @@ $(document).on('keyup','input[name=info]',function(event){
 const units = document.getElementsByName('currency');
 console.log(units)
 const calBtn = document.getElementById('calc');        
-calBtn.addEventListener('click' || 'touchstart' || 'touchend', function (){                                   
+calBtn.addEventListener('click' , function (){                                   
+    for(i = 0; i < units.length; i++) {
+        if(units[i].checked){
+            unit = units[i].value;        
+            if(unit === 'USD'){
+                calcUSD();
+            } else{            
+                calcVND();
+            }
+        }
+    }                    
+});
+
+calBtn.addEventListener('touchstart' , function (){                                   
+    for(i = 0; i < units.length; i++) {
+        if(units[i].checked){
+            unit = units[i].value;        
+            if(unit === 'USD'){
+                calcUSD();
+            } else{            
+                calcVND();
+            }
+        }
+    }                    
+});
+
+calBtn.addEventListener('touchend' , function (){                                   
     for(i = 0; i < units.length; i++) {
         if(units[i].checked){
             unit = units[i].value;        
