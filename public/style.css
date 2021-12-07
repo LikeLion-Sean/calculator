@@ -50,6 +50,9 @@ header {
   header {
     width: 100vw;
   }
+  .submit_button {
+    cursor: pointer;
+  }
 }
 
 header .lang {
@@ -102,6 +105,9 @@ header .exchange-rate {
   .container-small {
     width: 100vw;
   }
+  .submit_button {
+    cursor: pointer;
+  }
 }
 
 main {
@@ -132,6 +138,9 @@ input {
   }
   .btnbtn {
     margin-top: 1rem !important;
+  }
+  .submit_button {
+    cursor: pointer;
   }
 }
 
