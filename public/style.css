@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&family=Open+Sans:wght@400;500;600;700&display=swap");
 
-#calc {
+.btn {
   cursor: pointer;
 }
 
@@ -50,7 +50,7 @@ header {
   header {
     width: 100vw;
   }
-  #calc {
+  .btn {
     cursor: pointer;
   }
 }
@@ -105,7 +105,7 @@ header .exchange-rate {
   .container-small {
     width: 100vw;
   }
-  #calc {
+  .btn {
     cursor: pointer;
   }
 }
@@ -132,6 +132,7 @@ input {
   padding: 0.375rem 0.75rem;
 }
 
+
 @media screen and (max-width: 575px) {
   #nonepad {
     margin-bottom: 0 !important;
@@ -139,7 +140,7 @@ input {
   .btnbtn {
     margin-top: 1rem !important;
   }
-  #calc {
+  .btn {
     cursor: pointer;
   }
 }
