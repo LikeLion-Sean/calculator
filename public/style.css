@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&family=Open+Sans:wght@400;500;600;700&display=swap");
+
+.submit_button {
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  padding-right: 1rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  font-family: sans-serif, "Open Sans", "Nanum Gothic";
+}
+
+nav {
+  background-color: hsl(205, 78%, 60%);
+  padding-top: 1rem;
+}
+
+.nav-toggle {
+  display: none;
+}
+.links {
+  display: flex;
+  justify-content: space-around;
+}
+.links a {
+  color: #fff;
+}
+
+.container-header {
+  display: flex;
+  justify-content: center;
+}
+header {
+  font-weight: 500;
+  width: 40vw;
+  padding: 1rem;
+}
+
+@media screen and (max-width: 800px) {
+  header {
+    width: 100vw;
+  }
+}
+
+header .lang {
+  margin-bottom: 1rem;
+  font-size: 0.8rem;
+}
+header .lang a {
+  text-decoration: none;
+}
+header .lang img {
+  max-width: 25px;
+  height: auto;
+}
+.title {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 0;
+  font-weight: 700;
+}
+header p {
+  text-align: center;
+  color: #3b5998;
+  margin-bottom: 0;
+}
+header .currency {
+  display: flex;
+  justify-content: right;
+  margin-top: 1rem;
+  font-size: 0.8rem;
+}
+
+header .exchange-rate {
+  display: flex;
+  justify-content: right;
+  font-size: 0.8rem;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+}
+
+.container-small {
+  width: 40vw;
+  background: hsl(210, 36%, 96%);
+  padding: 1rem;
+}
+
+@media screen and (max-width: 800px) {
+  .container-small {
+    width: 100vw;
+  }
+}
+
+main {
+  font-weight: 500;
+  line-height: 1;
+}
+.unit {
+  display: flex;
+  justify-content: end;
+  font-size: smaller;
+}
+
+input {
+  text-align: end;
+}
+.netincome {
+  font-weight: 600;
+}
+
+.btnbtn {
+  justify-content: center;
+  padding: 0.375rem 0.75rem;
+}
+
+@media screen and (max-width: 575px) {
+  #nonepad {
+    margin-bottom: 0 !important;
+  }
+  .btnbtn {
+    margin-top: 1rem !important;
+  }
+}
+
+.btn-success {
+  margin-bottom: 0.5rem;
+}
+
+.second {
+  margin-top: 1.5rem;
+}
+
+.cal,
+.reset {
+  font-weight: 700;
+}
+
+.cal {
+  background-color: hsl(205, 72%, 37%);
+  color: #fff;
+}
+
+.reset {
+  background-color: hsl(360, 67%, 44%);
+  color: #fff;
+}
+
+section {
+  margin-top: 1.5rem;
+}
+
+section p {
+  font-size: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+footer {
+  margin-top: 2rem;
+}
+footer p {
+  text-align: center;
+  font-size: 0.8rem;
+}

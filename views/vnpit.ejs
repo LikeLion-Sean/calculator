@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+  <head>    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">  
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1317456351681523" crossorigin="anonymous"></script>    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
+    <link rel="stylesheet" href="../public/style.css">
+    <title>Tính thuế thu nhập cá nhân theo quy định của Việt Nam</title>
+  </head>
+  <body>
+    <!-- navbar -->
+    <%- include('nav.ejs') %>
+    <div class="container"> 
+      <div class="container-header">
+        <header>
+            <div>            
+                <div class="lang" id="eng">
+                  <a href="/vnpit/en"><img src="../public/images/gb.svg" alt="">&nbsp;EN</a>              
+                </div>             
+                <h5 class="title">Tính Lương Thực Nhận</h5>
+                <p>(Đối với người Việt Nam)</p>
+                <div class="currency">
+                    Ngoạt tệ: VND
+                </div>
+            </div>        
+        </header>
+      </div>
+    </div>
+    
+    <div class="container main">
+      <main class="container-small">
+        <div class="mt-3">        
+            <form name="pit" >            
+                <div class="mb-3 row" id="nonepad">
+                    <label class="col-sm-7 col-form-label">Lương cơ bản hàng tháng</label>
+                    <div class="col-sm-5">
+                      <input type="text" class="form-control" id="basic_salary" name="info" autocomplete="off">
+                    </div>
+                </div>
+                <div class="mb-3 row" id="nonepad">
+                    <label class="col-sm-7 col-form-label">Phụ cấp ăn trưa</label>
+                    <div class="col-sm-5">
+                      <input type="text" class="form-control" id="lunch" name="info" autocomplete="off">
+                    </div>
+                </div>
+                <div class="mb-3 row" id="nonepad">
+                  <label class="col-sm-7 col-form-label">Các khoản phụ cấp không phải đóng bảo hiểm xã hội</label>
+                  <div class="col-sm-5">
+                    <input type="text" class="form-control" id="no_insurance_allowance" name="info" autocomplete="off">
+                  </div>
+                </div>
+                <div class="mb-3 row" id="nonepad">
+                  <label class="col-sm-7 col-form-label">Các khoản phụ cấp khác</label>
+                  <div class="col-sm-5">
+                    <input type="text" class="form-control" id="other_allowance" name="info" autocomplete="off">
+                  </div>
+                </div>
+                <div class="mb-3 row" id="nonepad">
+                  <label class="col-sm-7 col-form-label">Hoa hồng hàng tháng</label>
+                  <div class="col-sm-5">
+                    <input type="text" class="form-control" id="incentive" name="info" autocomplete="off">
+                  </div>
+                </div>
+                <div class="mb-3 row" id="nonepad">                
+                    <label class="col-sm-7 col-form-label">Số lượng người phụ thuộc (Không bao gồm bản thân)</label>
+                    <div class="col-sm-5">
+                      <input type="text" class="form-control" id="family" name="info" autocomplete="off">
+                    </div>
+                </div>
+                <div class="mb-3 row btnbtn">
+                  <input type="button" class="btn btn-primary btn-block cal" value="Tính Toán" id="calc"/>
+                </div>
+
+                <div class="mb-3 row" id="nonepad">
+                  <label class="col-sm-7 col-form-label netincome">Tổng tiền lương</label>
+                  <div class="col-sm-5">
+                    <input type="text" class="form-control result netincome" name="result_gross" readonly required/>
+                  </div>
+                </div>
+                <div class="mb-3 row" id="nonepad">
+                  <label class="col-sm-7 col-form-label netincome">Thuế thu nhập cá nhân</label>
+                  <div class="col-sm-5">
+                    <input type="text" class="form-control result netincome" name="result_pit" readonly required/>
+                  </div>
+                </div>
+                <div class="mb-3 row" id="nonepad">
+                  <label class="col-sm-7 col-form-label netincome">Bảo hiểm bắt buộc (do nhân viên trả)</label>
+                  <div class="col-sm-5">
+                    <input type="text" class="form-control result netincome" name="result_insurance" readonly required/>
+                  </div>
+                </div>
+                <div class="mb-3 row" id="nonepad">
+                    <label class="col-sm-7 col-form-label netincome">Phí công đoàn</label>
+                    <div class="col-sm-5">
+                      <input type="text" class="form-control result netincome" name="result_union" readonly required/>
+                    </div>
+                </div>
+                <div class="mb-3 row" id="nonepad">
+                  <label class="col-sm-7 col-form-label netincome">Lương thực nhận hàng tháng</label>
+                  <div class="col-sm-5">
+                    <input type="text" class="form-control result netincome" name="result_income" readonly required/>
+                  </div>
+                </div>
+                
+                <div class="mb-3 row btnbtn second">                  
+                  <input type="reset" class="btn btn-danger btn-block reset" value="Làm Lại"/>                  
+                </div>
+            </form>
+        </div>
+      </main>
+    </div>
+
+    <div class="container">      
+      <section>
+        <div> 
+            <p>              
+                * Công cụ tính lương thực nhận này chỉ dành cho người Việt Nam. Số tiền lương thực nhận của người nước ngoài 
+                thuộc diện cư trú và làm việc tại Việt Nam thì cho ra kết quả khác với cách tính này.
+            </p>
+            <p>              
+                * Cách tính lương thực nhận này không áp dụng cho trường hợp cá nhân có giảm trừ cho đóng góp từ thiện.
+            </p>         
+        </div>
+      </section>      
+    <footer>
+      <div>
+        <p>
+          Copyright &copy; 2021.PARK JINHONG all right reserved.
+        </p>
+      </div>
+    </footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>   
+    <script src="../public/vnapp.js"></script>
+  </body>
+</html>
