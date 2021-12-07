@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&family=Open+Sans:wght@400;500;600;700&display=swap");
 
-.submit_button {
+#calc {
   cursor: pointer;
 }
 
@@ -50,7 +50,7 @@ header {
   header {
     width: 100vw;
   }
-  .submit_button {
+  #calc {
     cursor: pointer;
   }
 }
@@ -105,7 +105,7 @@ header .exchange-rate {
   .container-small {
     width: 100vw;
   }
-  .submit_button {
+  #calc {
     cursor: pointer;
   }
 }
@@ -139,7 +139,7 @@ input {
   .btnbtn {
     margin-top: 1rem !important;
   }
-  .submit_button {
+  #calc {
     cursor: pointer;
   }
 }
