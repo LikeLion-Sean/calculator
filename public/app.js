@@ -3,25 +3,13 @@ $(document).on('keyup','input[name=info]',function(event){
     this.value = this.value.replace(/(^0+)/, "");           
     this.value = this.value.replace(/,/g,'');          
     this.value = this.value.replace(/\B(?=(\d{3})+(?!\d))/g, ","); 	
-}); 
+});
+
 
 const units = document.getElementsByName('currency');
 console.log(units)
-const calBtn = document.getElementById('calc');        
-calBtn.addEventListener('click' , function (){                                   
-    for(i = 0; i < units.length; i++) {
-        if(units[i].checked){
-            unit = units[i].value;        
-            if(unit === 'USD'){
-                calcUSD();
-            } else{            
-                calcVND();
-            }
-        }
-    }                    
-});
 
-calBtn.addEventListener('touchstart' , function (){                                   
+$("#calc").on('click touchstart touchend', function (){                                   
     for(i = 0; i < units.length; i++) {
         if(units[i].checked){
             unit = units[i].value;        
@@ -32,20 +20,20 @@ calBtn.addEventListener('touchstart' , function (){
             }
         }
     }                    
-});
-
-calBtn.addEventListener('touchend' , function (){                                   
-    for(i = 0; i < units.length; i++) {
-        if(units[i].checked){
-            unit = units[i].value;        
-            if(unit === 'USD'){
-                calcUSD();
-            } else{            
-                calcVND();
-            }
-        }
-    }                    
-});
+})
+// const calBtn = document.getElementById('calc');        
+// calBtn.addEventListener('click' , function (){                                   
+//     for(i = 0; i < units.length; i++) {
+//         if(units[i].checked){
+//             unit = units[i].value;        
+//             if(unit === 'USD'){
+//                 calcUSD();
+//             } else{            
+//                 calcVND();
+//             }
+//         }
+//     }                    
+// });
 
 function calcUSD(){
     fetch('https://vnkrtax.com/api/exchange/usd')
